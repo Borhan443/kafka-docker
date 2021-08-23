@@ -1,7 +1,7 @@
 FROM azul/zulu-openjdk-alpine:8u292-8.54.0.21
 
-ARG kafka_version=2.7.0
-ARG scala_version=2.13
+ARG kafka_version=2.3.0
+ARG scala_version=2.12
 ARG glibc_version=2.31-r0
 ARG vcs_ref=unspecified
 ARG build_date=unspecified
@@ -13,7 +13,7 @@ LABEL org.label-schema.name="kafka" \
       org.label-schema.vcs-ref="${vcs_ref}" \
       org.label-schema.version="${scala_version}_${kafka_version}" \
       org.label-schema.schema-version="1.0" \
-      maintainer="wurstmeister"
+      maintainer="borhan"
 
 ENV KAFKA_VERSION=$kafka_version \
     SCALA_VERSION=$scala_version \
